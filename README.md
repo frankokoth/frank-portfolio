@@ -3,7 +3,7 @@
 Welcome to my personal developer portfolio website! This site showcases my background, skills, and projects. It was built with **HTML5**, **CSS3**, and **JavaScript**, and it's fully responsive for mobile and desktop users.
 
 ## Live Site
-🌍 [View Portfolio on GitHub Pages](https://github.com/frankokoth/frankokoth.github.io)
+🌍 [View Portfolio on GitHub Pages]((https://frankokoth.github.io/main.html))
 
 ## Project Structure
 
