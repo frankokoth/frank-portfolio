@@ -3,7 +3,7 @@
 Welcome to my personal developer portfolio website! This site showcases my background, skills, and projects. It was built with **HTML5**, **CSS3**, and **JavaScript**, and it's fully responsive for mobile and desktop users.
 
 ## Live Site
-🌍 [View Portfolio on GitHub Pages](https://github.com/frankokoth/frank-portfolio)
+🌍 [View Portfolio on GitHub Pages](https://github.com/frankokoth/frankokoth.github.io)
 
 ## Project Structure
 
@@ -11,6 +11,7 @@ Welcome to my personal developer portfolio website! This site showcases my backg
 frank-portfolio/
 ├── index.html         # Main landing page
 ├── about.html         # About me section
+├── resume.html        # My education & work experience section
 ├── services.html      # Services I offer
 ├── portfolio.html     # My projects
 ├── contact.html       # Contact form
@@ -33,7 +34,7 @@ To run this project on your machine:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/frankokoth/frank-portfolio.git]
+   git clone [https://github.com/frankokoth/frankokoth.github.io]
    ```
 
 2. Navigate to the folder:
@@ -50,7 +51,7 @@ To run this project on your machine:
 3. Under **Source**, select `main` branch and `/ (root)` directory.
 4. Save, and your website will be published at:
    ```
-   https://github.com/frankokoth/frank-portfolio
+   https://github.com/frankokoth/frankokoth.github.io
    ```
 
 # Contact
