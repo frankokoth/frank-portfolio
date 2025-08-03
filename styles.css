@@ -1,0 +1,866 @@
+
+/* styles.css */
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Global Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Navbar Logo styles */
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Navbar Menu styles */
+.navbar ul {
+    display: flex;  
+}
+
+/* Navbar List styles */
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+/* Navbar Link styles */
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+/* Navbar Link hover and active styles */
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #2a9d8f;
+}
+
+/* Navbar Button styles */
+.home {
+    height: 100vh;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+/* Home Info styles */
+.home-info h1{
+    font-size: 55px;
+}
+
+/* Home Info h2 styles */
+.home-info h2 {
+    display: inline;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+/* Home Info h2 span styles */
+.home-info h2 span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: .7px #2a9d8f;
+  animation: display-text 15s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+
+/* Home Info h2 span before styles */
+@keyframes display-text {
+    25%, 100% {
+        display: none;
+    }
+}
+
+/* Home Info h2 span before styles */
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid #2a9d8f;
+    color: #2a9d8f;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+/* Home Info h2 span after styles */
+@keyframes fill-text {
+    10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+/* Home Info p styles */
+.home-info p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+/* Home Info Button styles */
+.home-info .btn-sci{
+  display: flex;
+  align-items: center;
+}
+
+/* Home Info Button styles */
+.home-info .btn{
+  display: inline-block;
+  padding: 10px 30px;
+  background: #2a9d8f;
+  border: 2px solid #2a9d8f;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #2a9d8f;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  transition: .5s;
+}
+
+
+/* Home Info Button hover styles */
+.home-info .btn:hover {
+    background: transparent;
+    color: #2a9d8f;
+    box-shadow: none;
+}
+
+/* Home Info Button icon styles */
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+/* Home Info Button icon styles */
+.home-info .btn-sci .sci a{
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid #2a9d8f;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  margin: 0 8px;
+  transition: .5s;
+}
+
+/* Home Info Button icon hover styles */
+.home-info .btn-sci .sci a:hover {
+    background: #2a9d8f;
+    color: #1f242d;
+    box-shadow: 0 0 10px #2a9d8f;
+}
+
+/* Home Image styles */
+.home-img .img-box{
+  position: relative;
+  width: 32vw;
+  height: 32vw;
+  border-radius:  60%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Home Image styles */
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 5000px;
+    height: 5000px;
+}
+
+/* Home Image before styles */
+.home-img .img-box::after{
+  animation-delay: -5s;
+}
+
+
+/* Home Image item styles */
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #264653;
+    border-radius: 50%;
+    border: .1px solid #264653;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Home Image item styles */
+.home-img .img-box .img-item img {
+    position: absolute;
+    display: block;
+    top: 30px;
+    width: 87%;
+}
+
+/* Home Image item styles */
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+/* Home Image item styles */
+.bars-animation .bars {
+    width: 100%;
+    height: 100%;
+    background: #264653;
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+/* Home Image item styles for the bars */
+@keyframes show-bars {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+/* About Page Styles */
+.about {
+  min-height: 100vh;
+  padding: 120px 9% 60px;
+  color: #fff;
+  background: #264653;
+}
+
+/* About Page Sidebar Styles */
+.about .aside {
+  background-color: #264653;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+/* About Page Profile Picture Styles */
+.about .profile {
+  margin-bottom: 20px;
+}
+
+/* About Page Profile Picture Styles */
+.about .profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* About Page Contact Info Styles */
+.contact-info a {
+  color: #2a9d8f;
+  text-decoration: none;
+}
+
+/* About Page Contact Info Styles */
+.contact-info p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+/* About Page Content Styles */
+.about .container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* About Page Heading Styles */
+.about h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #2a9d8f;
+}
+
+/* About Page Subheading Styles */
+.about h2 {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* About Page Paragraph Styles */
+.about p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* About Page Skills List Styles */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* About Page Skills List Item Styles */
+.skills-list li {
+  padding: 5px 0;
+  font-weight: 500;
+}
+/* About Page Skills List Item Styles */
+.skills-list li::before {
+  content: '•';
+  color: #2a9d8f;
+  margin-right: 10px;
+}
+
+/* About Page Skills List Item Styles */
+.skills-list li:hover {
+  color: #2a9d8f;
+  cursor: pointer;
+} 
+/* About Page Skills List Item Styles */
+.skills-list li:hover::before {
+  color: #fff;
+} 
+
+/* About Page Skills List Item Styles */
+.skills-list li:hover {
+  color: #2a9d8f;
+  cursor: pointer;
+}
+
+/* About Page Skills List Item Styles */    
+.skills-list li:hover::before {
+  color: #fff;
+}
+
+/* About Page Social Media Icons Styles */
+.socials {
+  margin-top: 20px;
+}
+
+/* About Page Social Media Icons Styles */
+.socials a {
+  display: inline-block;
+  margin: 5px 10px;
+  color: #2a9d8f;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+
+/* Portfolio Page Styles */
+.portfolio {
+  min-height: 100vh;
+  padding: 120px 9% 60px;
+  background: #264653;
+  color: #fff;
+}
+
+/* Portfolio Page Container Styles */
+.portfolio .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Portfolio Page Heading Styles */
+.portfolio h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #2a9d8f;
+}
+
+/* Portfolio Page Projects Grid Styles */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Project Card Styles */
+.project-card {
+  background: #264653;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+/* Project Card hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Project Card Image Styles */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Project Card Heading Styles */
+.project-card h3 {
+  margin: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Project Card Paragraph Styles */
+.project-card p {
+  margin: 0 15px 15px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+/* Project Card Link Styles */
+.project-card a {
+  color: #2a9d8f;
+  text-decoration: none;
+  font-weight: 500;
+}
+/* Project Card Link hover effect */
+.project-card a:hover {
+  color: #fff;
+}
+/* Project Card Type Styles */
+.project-card p strong {
+  color: #2a9d8f;
+}
+/* Project Card Type Styles */
+.project-card p span {
+  color: #2a9d8f;
+  font-weight: 600;
+}
+/* Project Card Type Styles */
+.project-card p span::before {
+  content: 'Type: ';
+  font-weight: 500;
+  color: #fff;
+}
+/* Project Card Type Styles */
+.project-card p span::after {
+  content: ' | ';
+  font-weight: 500;
+  color: #fff;
+}
+/* Project Card Type Styles */
+.project-card p span:last-child::after {
+  content: '';
+}
+
+/* Services Page Styles */
+.services {
+  min-height: 100vh;
+  padding: 120px 9% 60px;
+  background: #264653;
+  color: #fff;
+}
+
+/* Services Page Container Styles */
+.services .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Services Page Heading Styles */
+.services h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #2a9d8f;
+}
+
+/* Services Page Paragraph Styles */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Service Card Styles */
+.service-card {
+  background: #264653;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+/* Service Card hover effect */
+.service-card:hover {
+  transform: translateY(-7px);
+}
+
+/* Service Card Icon Styles */
+.service-card i {
+  font-size: 40px;
+  color: #2a9d8f;
+  margin-bottom: 15px;
+}
+
+/* Service Card Heading Styles */
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Service Card Paragraph Styles */
+.service-card p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+/* Service Card Link Styles */
+.service-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #2a9d8f;
+  color: #264653;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+
+/* Contact Page Styles */
+.contact {
+  min-height: 100vh;
+  padding: 120px 9% 60px;
+  background: #264653;
+  color: #fff;
+}
+
+/* Contact Page Container Styles */
+.contact .container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Contact Page Heading Styles */
+.contact h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #2a9d8f;
+}
+
+/* Contact Page Paragraph Styles */
+.contact p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Contact Form Input Styles */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #fff;
+}
+
+/* Contact Form Input focus styles */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 2px solid #2a9d8f;
+  background: #264653;
+}
+/* Contact Form Textarea Styles */
+.contact-form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Contact Form Button Styles */
+.contact-form .btn {
+  width: fit-content;
+  align-self: center;
+}
+/* Contact Form Button Styles */
+.contact-form .btn {
+  padding: 12px 30px;
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+/* Contact Form Button hover styles */
+.contact-form .btn:hover {
+  background: #1f242d;
+} 
+
+/* Footer Styles */
+.social-icons {
+  margin-top: 30px;
+}
+
+/* Footer Social Icons Styles */
+.social-icons a {
+  font-size: 25px;
+  color: #2a9d8f;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+/* Footer Social Icons hover styles */
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* sidebar */
+.about {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+/* sidebar */
+.sidebar {
+  background-color: #264653;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+/* sidebar profile picture */
+.sidebar .profile {
+  margin-bottom: 20px;
+}
+/* sidebar profile picture */
+.sidebar .profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+/* sidebar profile picture */
+.sidebar .profile h2 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+/* sidebar profile picture */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* sidebar contact info */
+.sidebar h2 {
+  margin-top: 10px;
+}
+
+/* sidebar contact info */
+.sidebar p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+/* sidebar contact info */
+.socials a {
+  display: inline-block;
+  margin: 5px 10px;
+  color: #2a9d8f;
+  text-decoration: none;
+}
+/* sidebar contact info */
+.about-content {
+  flex: 1;
+  padding: 40px;
+  background: #264653;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+
+/* Experience Page Styles */
+ .education {
+      padding: 120px 9% 60px;
+      background: #264653;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* Experience Page Container Styles */
+    .heading {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+/* Experience Page Heading Styles */
+    .heading span {
+      color: #2a9d8f;
+    }
+
+    /* Experience Page Row Styles */
+    .education-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    /* Experience Page Column Styles */
+    .education-column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    /* Experience Page Title Styles */
+    .education-column .title {
+      font-size: 24px;
+      color: #2a9d8f;
+      margin-bottom: 20px;
+    }
+
+    /* Experience Page Education Box Styles */
+    .education-box {
+      border-left: 2px solid #2a9d8f;
+      padding-left: 20px;
+    }
+
+    /* Experience Page Education Content Styles */
+    .education-content {
+      margin-bottom: 25px;
+    }
+
+    /* Experience Page Education Content Styles */
+    .education-content .content {
+      background: #2a9d8f;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+
+    /* Experience Page Education Content Styles */
+    .education-content .content .year {
+      font-size: 14px;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    /* Experience Page Education Content Styles */
+    .education-content .content h3 {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    /* Experience Page Education Content Styles */
+    .education-content .content p {
+      font-size: 15px;
+      color: white;
+    }
+  
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+/* Navbar List styles */
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+/* Navbar Link styles */
+  .home {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .home-info h1 {
+    font-size: 38px;
+  }
+
+  .home-info h2 {
+    font-size: 24px;
+  }
+
+  .home-img .img-box {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .projects-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+  }
+}
